@@ -1,0 +1,75 @@
+# L2 — universal conversational intents shared by every project.
+# Projects can drop any of these via `core.disable_intents`.
+# When a message carries a concrete project task AND one of these acts (e.g. a complaint
+# about a late refund), the project intent is primary and these come second.
+labels:
+  - name: greeting
+    description: Opens the conversation or says hello, with no other request.
+    examples: ["hi", "hello there", "good morning!", "hey, anyone there?"]
+    negative_examples: ["hi, where is my order?"]
+
+  - name: goodbye
+    description: Ends the conversation or signs off.
+    examples: ["bye", "that's all, see you", "ok I'm done for now", "talk later"]
+
+  - name: thanks
+    description: Expresses gratitude, with no further request.
+    examples: ["thanks!", "thank you so much, that helped", "appreciate it", "great, cheers"]
+
+  - name: small_talk
+    description: >-
+      Light social chat with the assistant that isn't a task: asking how it is, whether it is a
+      bot, jokes, compliments.
+    examples: ["how are you today?", "are you a robot?", "you're pretty smart", "tell me something fun"]
+    negative_examples: ["What's the capital of Australia?"]
+
+  - name: human_handoff
+    description: Asks to talk to a human, agent, representative, or to be called back by a person.
+    examples:
+      - can I talk to a real person
+      - get me a human agent please
+      - I want to speak to your manager
+      - stop, connect me to customer care
+
+  - name: complaint
+    description: >-
+      Expresses dissatisfaction or frustration with the service, product or assistant without a
+      more specific actionable request.
+    examples:
+      - your service has been terrible lately
+      - this is the third time I'm contacting you, unacceptable
+      - honestly this bot is not helping at all
+    negative_examples: ["my refund still hasn't arrived, it's been two weeks"]
+
+  - name: feedback
+    description: Gives a suggestion, rating or review of the service or assistant (positive or neutral).
+    examples:
+      - you should add a dark mode to the app
+      - I'd rate this chat 5 stars
+      - "suggestion: let people save multiple addresses"
+
+  - name: affirm
+    description: >-
+      Says yes / agrees / confirms. With history, the confirmed thing is usually the primary
+      intent and affirm comes second.
+    examples: ["yes", "yeah go ahead", "correct", "sure, do it", "that's right"]
+
+  - name: deny
+    description: >-
+      Says no / declines / rejects. With history, the declined thing is usually the primary
+      intent and deny comes second.
+    examples: ["no", "nope", "don't do that", "no thanks", "not that one"]
+
+  - name: capabilities
+    description: Asks what the assistant can do or how to use it.
+    examples: ["what can you help me with?", "what do you do?", "how does this chat work?"]
+
+  - name: clarification
+    description: >-
+      Asks the assistant to repeat, explain or rephrase its previous message, or says they didn't
+      understand it.
+    examples: ["what do you mean?", "can you say that again", "I don't understand", "explain that more simply"]
+
+  - name: gibberish
+    description: Random characters, keyboard mashing, or text with no recoverable meaning.
+    examples: ["asdkjh qwe", "....", "jjjjjjjj", "lkj;lkj;lkj"]

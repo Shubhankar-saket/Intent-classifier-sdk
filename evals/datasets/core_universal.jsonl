@@ -1,0 +1,38 @@
+{"id": "u-001", "message": "hello!!", "history": [], "expected_intent": "greeting", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-002", "message": "hey there, good evening", "history": [], "expected_intent": "greeting", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-003", "message": "yo", "history": [], "expected_intent": "greeting", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-004", "message": "ok that's everything, bye bye", "history": [], "expected_intent": "goodbye", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-005", "message": "I'll leave it here for today, take care", "history": [], "expected_intent": "goodbye", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-006", "message": "thanks a ton, you've been really helpful", "history": [], "expected_intent": "thanks", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-007", "message": "much appreciated!", "history": [], "expected_intent": "thanks", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-008", "message": "thnx", "history": [], "expected_intent": "thanks", "expected_guardrails": [], "tags": ["single_turn", "typo"]}
+{"id": "u-009", "message": "do you ever get tired of answering questions?", "history": [], "expected_intent": "small_talk", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-010", "message": "am I chatting with a human or a machine?", "history": [], "expected_intent": "small_talk", "acceptable_intents": ["capabilities"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-011", "message": "haha you're funny", "history": [], "expected_intent": "small_talk", "acceptable_intents": ["feedback"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-012", "message": "let me talk to someone from customer service, not a bot", "history": [], "expected_intent": "human_handoff", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-013", "message": "please transfer me to a live agent", "history": [], "expected_intent": "human_handoff", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-014", "message": "I need a callback from your team", "history": [], "expected_intent": "human_handoff", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-015", "message": "agent", "history": [], "expected_intent": "human_handoff", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-016", "message": "worst shopping experience of my life honestly", "history": [], "expected_intent": "complaint", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-017", "message": "I've been a customer for 5 years and the service has never been this bad", "history": [], "expected_intent": "complaint", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-018", "message": "you keep giving me the same useless answer", "history": [], "expected_intent": "complaint", "acceptable_intents": ["human_handoff"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-019", "message": "would be great if the app showed delivery time in hours", "history": [], "expected_intent": "feedback", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-020", "message": "the new checkout page looks really clean, good job", "history": [], "expected_intent": "feedback", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-021", "message": "10/10 support today", "history": [], "expected_intent": "feedback", "acceptable_intents": ["thanks"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-022", "message": "yes please", "history": [], "expected_intent": "affirm", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-023", "message": "absolutely, go for it", "history": [], "expected_intent": "affirm", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-024", "message": "yup that's the one", "history": [], "expected_intent": "affirm", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-025", "message": "no, not now", "history": [], "expected_intent": "deny", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-026", "message": "nah I'm good", "history": [], "expected_intent": "deny", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-027", "message": "wrong, that's not what I asked", "history": [], "expected_intent": "deny", "acceptable_intents": ["complaint", "clarification"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-028", "message": "what kind of things can I ask you?", "history": [], "expected_intent": "capabilities", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-029", "message": "can you help with orders or only products?", "history": [], "expected_intent": "capabilities", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-030", "message": "what are you able to do for me", "history": [], "expected_intent": "capabilities", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-031", "message": "sorry, I didn't get that", "history": [], "expected_intent": "clarification", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-032", "message": "huh? come again", "history": [], "expected_intent": "clarification", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-033", "message": "can you put that in simpler words", "history": [], "expected_intent": "clarification", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-034", "message": "fghfgh dfgdfg", "history": [], "expected_intent": "gibberish", "acceptable_intents": ["unknown"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-035", "message": "?????", "history": [], "expected_intent": "gibberish", "acceptable_intents": ["unknown", "clarification"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-036", "message": "zxcvbnm", "history": [], "expected_intent": "gibberish", "acceptable_intents": ["unknown"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-037", "message": "hmm", "history": [], "expected_intent": "unknown", "acceptable_intents": ["gibberish", "clarification"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "u-038", "message": "the thing", "history": [], "expected_intent": "unknown", "acceptable_intents": ["gibberish", "clarification"], "expected_guardrails": [], "tags": ["single_turn"]}

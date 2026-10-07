@@ -1,0 +1,176 @@
+# Synthetic pilot project: customer-support assistant for an online store.
+# This file is all a project team writes; guardrails and universal intents come from the core.
+project: shopease
+version: 0.1.0
+domain: >-
+  Customer support for ShopEase, an online store selling fashion, footwear and electronics in
+  India. Covers orders, delivery, returns, refunds, payments, coupons, product questions,
+  store policies and the customer's account.
+languages: [en, hi]
+history:
+  max_turns: 6
+  max_chars: 4000
+core:
+  disable_intents: []
+  guardrail_actions: {}
+
+intents:
+  - name: order.track
+    description: Wants the status, location or expected delivery date of an order that is on its way.
+    examples:
+      - where is my order?
+      - when will order 55120 arrive
+      - can you track my package for me
+      - has my order shipped yet?
+      - what's the delivery date for my headphones
+      - my order status still says processing
+    negative_examples:
+      - it says delivered but I never got it
+      - cancel my order
+
+  - name: order.cancel
+    description: Wants to cancel an order (or part of one) that has been placed.
+    examples:
+      - I want to cancel my order
+      - please cancel order 88123
+      - cancel the shoes from my last order, keep the rest
+      - I ordered by mistake, can I cancel?
+      - stop my order, I don't need it anymore
+    negative_examples:
+      - I want to return the shoes I received
+
+  - name: order.modify
+    description: Wants to change an existing order before it ships — delivery address, size, colour, quantity or items.
+    examples:
+      - can I change the delivery address on my order
+      - I need size M instead of L in the order I just placed
+      - add one more charger to my order
+      - change the colour of the kurta I ordered to blue
+      - update the phone number for this delivery
+    negative_examples:
+      - how do I update my address in my profile
+      - I want to exchange the shoes I received for a bigger size
+
+  - name: delivery.problem
+    description: >-
+      A problem with delivery itself: late beyond the promised date, marked delivered but not
+      received, courier didn't show up, package lost.
+    examples:
+      - it says delivered but I never got it
+      - my order was supposed to come 3 days ago
+      - the courier guy never came and marked it as attempted
+      - I think my package is lost
+      - delivery is delayed again
+    negative_examples:
+      - where is my order?
+      - the box arrived crushed and the phone screen is broken
+
+  - name: product.damaged_or_wrong
+    description: Received an item that is damaged, defective, used, incomplete or not what was ordered.
+    examples:
+      - the item I got is broken
+      - you sent me the wrong size
+      - the box arrived crushed and the phone screen is cracked
+      - the earbuds don't charge, they're defective
+      - I received someone else's order
+      - the charger was missing from the box
+    negative_examples:
+      - I don't like the colour, I want to return it
+
+  - name: return.request
+    description: Wants to return or exchange an item they received (changed mind, fit, didn't like it), or asks how to start one.
+    examples:
+      - I want to return the shoes
+      - how do I return something
+      - the dress doesn't fit, can I exchange it for a bigger size
+      - schedule a pickup for my return
+      - I'd like to send back the jacket
+    negative_examples:
+      - what is your return policy for electronics?
+      - where is my refund for the return I sent
+
+  - name: refund.status
+    description: Asks about a refund that is expected — when it will arrive, why it hasn't, or how much.
+    examples:
+      - where is my refund
+      - I returned the jacket two weeks ago and still no money
+      - how long does the refund take to reach my bank
+      - refund not credited yet
+      - why did I only get half my money back
+    negative_examples:
+      - I was charged twice for one order
+
+  - name: payment.issue
+    description: >-
+      A problem with paying or being charged: payment failed, money deducted but order not
+      placed, double charge, card declined, UPI payment stuck. Questions about WHICH payment
+      methods, EMI or COD are offered are store.policy, not this.
+    examples:
+      - payment failed but money was deducted
+      - I was charged twice for one order
+      - my UPI payment is stuck in pending
+      - why was my card declined
+      - the EMI payment page keeps throwing an error at checkout
+    negative_examples:
+      - where is my refund
+      - can I pay with EMI on this phone
+      - do you accept Amex cards
+
+  - name: account.access
+    description: Can't log in or access their account — forgotten password, OTP not received, account locked or hacked.
+    examples:
+      - I can't log in
+      - I'm not getting the OTP
+      - forgot my password, how do I reset it
+      - my account got locked after too many tries
+      - someone else is using my account
+    negative_examples:
+      - change the email on my account
+
+  - name: account.update
+    description: Wants to change profile details — name, email, phone, saved addresses, notification settings — or delete the account.
+    examples:
+      - how do I change my email address
+      - update my phone number in my profile
+      - remove an old saved address
+      - stop sending me promotional SMS
+      - please delete my account
+    negative_examples:
+      - change the delivery address on my current order
+
+  - name: product.info
+    description: Questions about a product — specs, sizing, materials, compatibility, price, availability, restock.
+    examples:
+      - is this phone 5G?
+      - do you have these sneakers in size 10
+      - what material is the hoodie made of
+      - when will the black variant be back in stock
+      - does this laptop come with a charger
+      - is the watch waterproof
+    negative_examples:
+      - the watch I received stopped working
+
+  - name: promo.coupon
+    description: Coupons, discount codes, offers, sales, cashback and loyalty points.
+    examples:
+      - my coupon code isn't working
+      - are there any offers on headphones right now
+      - when is the next big sale
+      - I didn't get the cashback I was promised
+      - how do I use my reward points
+
+  - name: store.policy
+    description: >-
+      General questions about store policies, not about a specific order: return window,
+      shipping charges, delivery areas, warranty, and which payment options are offered
+      (COD, EMI / no-cost EMI, accepted cards, UPI).
+    examples:
+      - what is your return policy for electronics?
+      - do you deliver to Shillong
+      - is cash on delivery available
+      - how much is shipping
+      - do products come with a warranty
+      - can I pay with EMI on this phone
+    negative_examples:
+      - I want to return the shoes
+      - my EMI payment failed but money was deducted

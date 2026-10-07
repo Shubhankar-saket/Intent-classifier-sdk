@@ -1,0 +1,70 @@
+{"id": "s-001", "message": "Hi, could you tell me where my parcel is right now? Order 51233.", "history": [], "expected_intent": "order.track", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-002", "message": "Is my sneaker order out for delivery today?", "history": [], "expected_intent": "order.track", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-003", "message": "estimated arrival for the TV I bought on monday?", "history": [], "expected_intent": "order.track", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-004", "message": "wheres my oder", "history": [], "expected_intent": "order.track", "expected_guardrails": [], "tags": ["single_turn", "typo"]}
+{"id": "s-005", "message": "Tracking link isn't loading, can you give me the latest status?", "history": [], "expected_intent": "order.track", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-006", "message": "Has the courier picked up my laptop from the warehouse yet?", "history": [], "expected_intent": "order.track", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-007", "message": "I placed an order 10 minutes ago and want to call it off.", "history": [], "expected_intent": "order.cancel", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-008", "message": "Don't ship order 30981, I found it cheaper elsewhere.", "history": [], "expected_intent": "order.cancel", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-009", "message": "cancle my order pls", "history": [], "expected_intent": "order.cancel", "expected_guardrails": [], "tags": ["single_turn", "typo"]}
+{"id": "s-010", "message": "Can I cancel only the phone case and keep the phone?", "history": [], "expected_intent": "order.cancel", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-011", "message": "Is it too late to cancel if it's already shipped?", "history": [], "expected_intent": "order.cancel", "acceptable_intents": ["store.policy"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-012", "message": "I need to ship this order to my office instead of home.", "history": [], "expected_intent": "order.modify", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-013", "message": "Swap the black t-shirt in my order for a white one before it ships.", "history": [], "expected_intent": "order.modify", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-014", "message": "Could you increase the quantity of socks in my order from 2 to 4?", "history": [], "expected_intent": "order.modify", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-015", "message": "wrong flat number on my order, it should be B-402", "history": [], "expected_intent": "order.modify", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-016", "message": "Tracking shows delivered yesterday but there's nothing at my door.", "history": [], "expected_intent": "delivery.problem", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-017", "message": "It's been a week past the promised date. Where is it?!", "history": [], "expected_intent": "delivery.problem", "acceptable_intents": ["order.track"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-018", "message": "Delivery agent asked me to come pick it up from 5 km away, that's not okay.", "history": [], "expected_intent": "delivery.problem", "acceptable_intents": ["complaint"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-019", "message": "the tracking hasn't moved in 6 days, stuck at Nagpur hub", "history": [], "expected_intent": "delivery.problem", "acceptable_intents": ["order.track"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-020", "message": "Courier says address not found but my address is correct.", "history": [], "expected_intent": "delivery.problem", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-021", "message": "The blender jar came with a big crack in it.", "history": [], "expected_intent": "product.damaged_or_wrong", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-022", "message": "I ordered a blue kurta and got a green one.", "history": [], "expected_intent": "product.damaged_or_wrong", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-023", "message": "Smartwatch won't turn on out of the box.", "history": [], "expected_intent": "product.damaged_or_wrong", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-024", "message": "Package had only one shoe in it lol", "history": [], "expected_intent": "product.damaged_or_wrong", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-025", "message": "The jeans look used, there's a stain and the tag is missing.", "history": [], "expected_intent": "product.damaged_or_wrong", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-026", "message": "How do I send back a jacket that's too tight?", "history": [], "expected_intent": "return.request", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-027", "message": "I changed my mind about the speaker, want to return it.", "history": [], "expected_intent": "return.request", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-028", "message": "exchange these running shoes for size 9 please", "history": [], "expected_intent": "return.request", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-029", "message": "Return pickup didn't happen today, can you reschedule it?", "history": [], "expected_intent": "return.request", "acceptable_intents": ["delivery.problem"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-030", "message": "i wnat to retrun the bag", "history": [], "expected_intent": "return.request", "expected_guardrails": [], "tags": ["single_turn", "typo"]}
+{"id": "s-031", "message": "My refund was approved 10 days ago but my account shows nothing.", "history": [], "expected_intent": "refund.status", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-032", "message": "When will I get my money back for the cancelled order?", "history": [], "expected_intent": "refund.status", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-033", "message": "Refund amount is less than what I paid, why?", "history": [], "expected_intent": "refund.status", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-034", "message": "Is the refund going to my card or to ShopEase wallet?", "history": [], "expected_intent": "refund.status", "acceptable_intents": ["store.policy"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-035", "message": "Transaction failed at checkout but ₹2,499 got debited from my account.", "history": [], "expected_intent": "payment.issue", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-036", "message": "Do you accept Amex cards?", "history": [], "expected_intent": "store.policy", "acceptable_intents": [], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-037", "message": "I see two debits for the same order on my statement.", "history": [], "expected_intent": "payment.issue", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-038", "message": "Is no-cost EMI available for the laptop?", "history": [], "expected_intent": "store.policy", "acceptable_intents": ["promo.coupon", "product.info"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-039", "message": "The site keeps saying 'session expired' when I try to sign in.", "history": [], "expected_intent": "account.access", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-040", "message": "Verification code SMS never arrives on my phone.", "history": [], "expected_intent": "account.access", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-041", "message": "I think my account was hacked, there are orders I didn't place.", "history": [], "expected_intent": "account.access", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-042", "message": "how to reset pasword", "history": [], "expected_intent": "account.access", "expected_guardrails": [], "tags": ["single_turn", "typo"]}
+{"id": "s-043", "message": "I got a new number, how do I put it on my account?", "history": [], "expected_intent": "account.update", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-044", "message": "Unsubscribe me from all your marketing emails.", "history": [], "expected_intent": "account.update", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-045", "message": "I want to permanently close my ShopEase account.", "history": [], "expected_intent": "account.update", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-046", "message": "Can I change the name shown on my profile?", "history": [], "expected_intent": "account.update", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-047", "message": "Does the Galaxy A56 support wireless charging?", "history": [], "expected_intent": "product.info", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-048", "message": "Are these jeans true to size or should I size up?", "history": [], "expected_intent": "product.info", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-049", "message": "Will this charger work with a MacBook Air?", "history": [], "expected_intent": "product.info", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-050", "message": "any idea when the PS5 comes back in stock", "history": [], "expected_intent": "product.info", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-051", "message": "Is the cotton saree machine washable?", "history": [], "expected_intent": "product.info", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-052", "message": "Code WELCOME10 says invalid at checkout.", "history": [], "expected_intent": "promo.coupon", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-053", "message": "Do you have any student discount?", "history": [], "expected_intent": "promo.coupon", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-054", "message": "Where do I see how many SuperCoins I have?", "history": [], "expected_intent": "promo.coupon", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-055", "message": "Bank offer of 10% off wasn't applied to my order.", "history": [], "expected_intent": "promo.coupon", "acceptable_intents": ["payment.issue"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-056", "message": "How many days do I get to return clothes?", "history": [], "expected_intent": "store.policy", "acceptable_intents": ["return.request"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-057", "message": "Do you ship internationally, like to Dubai?", "history": [], "expected_intent": "store.policy", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-058", "message": "Is there a delivery charge on orders under 500?", "history": [], "expected_intent": "store.policy", "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-059", "message": "What's the warranty on laptops bought from you?", "history": [], "expected_intent": "store.policy", "acceptable_intents": ["product.info"], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-060", "message": "Can I pay cash when the parcel arrives?", "history": [], "expected_intent": "store.policy", "acceptable_intents": [], "expected_guardrails": [], "tags": ["single_turn"]}
+{"id": "s-061", "message": "Cancel order 7712 and also tell me when my refund for the old one will come.", "history": [], "expected_intent": "order.cancel", "acceptable_intents": ["refund.status"], "expected_guardrails": [], "tags": ["single_turn", "multi_intent"]}
+{"id": "s-062", "message": "My refund is 3 weeks late and nobody answers emails. Pathetic.", "history": [], "expected_intent": "refund.status", "expected_guardrails": [], "tags": ["single_turn", "multi_intent"]}
+{"id": "s-063", "message": "Thanks! Also, can I change the size in my order?", "history": [], "expected_intent": "order.modify", "expected_guardrails": [], "tags": ["single_turn", "multi_intent"]}
+{"id": "s-064", "message": "This is ridiculous, the phone you sent is a different model. Get me a human.", "history": [], "expected_intent": "product.damaged_or_wrong", "acceptable_intents": ["human_handoff"], "expected_guardrails": [], "tags": ["single_turn", "multi_intent"]}
+{"id": "s-065", "message": "Recommend a good recipe for paneer butter masala.", "history": [], "expected_intent": null, "expected_guardrails": ["off_topic"], "tags": ["oos", "single_turn"]}
+{"id": "s-066", "message": "What's the weather going to be like in Mumbai tomorrow?", "history": [], "expected_intent": null, "expected_guardrails": ["off_topic"], "tags": ["oos", "single_turn"]}
+{"id": "s-067", "message": "Help me debug this SQL query, it returns duplicate rows.", "history": [], "expected_intent": null, "expected_guardrails": ["off_topic"], "tags": ["oos", "single_turn"]}
+{"id": "s-068", "message": "Can you book a table for two at a restaurant tonight?", "history": [], "expected_intent": null, "expected_guardrails": ["off_topic"], "tags": ["oos", "single_turn"]}
+{"id": "s-069", "message": "Who won the cricket match yesterday?", "history": [], "expected_intent": null, "expected_guardrails": ["off_topic"], "tags": ["oos", "single_turn"]}
+{"id": "s-070", "message": "Track my Amazon order 402-1234567-1234567.", "history": [], "expected_intent": null, "acceptable_intents": ["order.track"], "expected_guardrails": ["off_topic"], "tags": ["oos", "single_turn"]}

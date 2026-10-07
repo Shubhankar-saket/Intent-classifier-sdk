@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intent-classify"
+version = "0.1.0"
+description = "Organisation-level, conversation-aware intent classification with shared guardrails and built-in evals."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.6",
+    "pyyaml>=6",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=1,<2"]
+openai = ["openai>=1.40"]
+local-embeddings = ["sentence-transformers>=3"]
+dev = ["pytest>=8", "anthropic>=1,<2", "openai>=1.40"]
+
+[project.scripts]
+intent-classify = "intent_classify.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+intent_classify = ["builtin/*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
